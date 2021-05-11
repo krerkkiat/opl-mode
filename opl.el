@@ -1,6 +1,7 @@
 ;;; lang/opl.el --- OPL major mode -*- coding: utf-8; lexical-binding: t; -*-
 ;;;
 ;;; This is a modification of an example at http://ergoemacs.org/emacs/elisp_syntax_coloring.html
+;;; The gammar file can be found at https://www.ibm.com/docs/en/icos/20.1.0?topic=syntax-opl-grammar
 
 (setq opl-keywords
       (let* (

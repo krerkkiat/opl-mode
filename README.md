@@ -1,2 +1,7 @@
-# opl-mode
-OPL mode for emacs
+# OPL Mode
+
+An OPL mode for Emacs.
+
+## TODO
+
+- Properly put file in a package.
