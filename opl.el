@@ -7,7 +7,7 @@
       (let* (
              ;; define serveral category of keywords
              (x-keywords '("using" "include" "execute" "main" "constraints" "subject" "assert" "with" "key" "minimize" "maximize"))
-             (x-types '("int" "float" "boolean" "int+" "float+" "string" "range" "constraint" "setof" "tuple" "struct"))
+             (x-types '("int" "float" "boolean" "int+" "float+" "string" "range" "constraint" "setof" "tuple" "struct" "dvar" "dexpr"))
              (x-modifiers '("ordered" "sorted" "reversed"))
              (x-constraints '("if" "forall"))
              (x-literals '("infinity" "maxint"))
@@ -26,7 +26,7 @@
              (x-piecewise-expression-regexp (regexp-opt x-piecewise-expression 'words)))
 
         `(
-          (,x-keywords-regexp . font-lock-type-face)
+          (,x-keywords-regexp . font-lock-keyword-face)
           (,x-types-regexp . font-lock-type-face)
           (,x-modifiers-regexp . font-lock-type-face)
           (,x-constraints-regexp . font-lock-type-face)
@@ -37,7 +37,7 @@
         )))
 
 ;;;###autoload
-(define-derived-mode opl-mode c-mode "opl mode" "Major mode for editing OPL"
+(define-derived-mode opl-mode c-mode "opl mode" "Major mode for editing OPL source code"
 
   ;; code for syntax hightlighting
   (setq font-lock-defaults '((opl-keywords))))
